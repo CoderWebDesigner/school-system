@@ -1,0 +1,14 @@
+{
+  "header":{
+    "log_out":"تسجيل الخروج",
+    "searchPlaceholder":"إبحث عن تلميذ او ولي امر .."
+  },
+  "notification":{
+    "title":"الاشعارات"
+  },
+  "dashboardTitle":"لوحة تحكم",
+  "chart":{
+    "line":"المصروفات",
+    "pie":"النوع"
+  }
+}

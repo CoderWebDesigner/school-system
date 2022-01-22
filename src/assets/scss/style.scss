@@ -1,0 +1,22 @@
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+
+
+@import 'helpers/reset';
+@import 'helpers/variables';
+@import 'helpers/colors';
+@import 'helpers/font';
+@import 'layout/side';
+@import 'layout/header';
+@import 'components/notification';
+@import 'components/avatar';
+@import 'components/dropdown';
+@import 'pages/dashboard';
+
+*{
+  font-family: $fontFamily ;
+  font-weight: 400;
+}
+.font-weight-bold{
+  font-weight: bold !important;
+}

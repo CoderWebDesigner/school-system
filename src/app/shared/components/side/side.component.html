@@ -1,0 +1,10 @@
+<aside>
+  <div class="logo p-3 mb-4">
+    <img src="../../../../assets/images/icons/logo.png" alt="" class="img-fluid" [style.width]="sideExpanded?'100%':'60px'">
+  </div>
+  <ul>
+    <li *ngFor="let route of routes" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="mb-2">
+      <a href="" [routerLink]="route.path"><i [class]="route.icon"></i> <span class="px-2" *ngIf="sideExpanded">{{route.linkText}}</span></a>
+    </li>
+  </ul>
+</aside>

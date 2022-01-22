@@ -1,0 +1,87 @@
+.mat-sidenav-container {
+  height: 100vh;
+
+  aside {
+    ul {
+      background: transparent;
+      max-width: 250px;
+      li {
+        padding: 0 20px;
+        position: relative;
+        a {
+          color: #b3b9c3;
+          padding: 15px 7px 12px;
+          display: block;
+          border-radius: 10px;
+          background: #fafcfe;
+          font-weight: 600;
+          transition: background .4s ease-in-out,color .4s ease-in-out;
+          i{
+            padding: 10px;
+            font-size: 25px;
+            border-radius: 5px;
+            background: transparent;
+            transition: background .4s ease-in-out;
+          }
+          span{
+            vertical-align: super;
+          }
+          &::after{
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 4px;
+            border-radius: 10px;
+            background: transparent;
+            right: 0;
+            top: 0;
+            transition: background .4s ease-in-out;
+          }
+        }
+
+        &:hover{
+          a {
+            background: $blueColor;
+            background: linear-gradient(90deg, rgba($goldColor,.5)  0%, rgba($goldColor,.2) 72%);
+            color: #000;
+            i{
+              background: #fff;
+            }
+            &::after{
+              background: $blueColor;
+            }
+          }
+        }
+
+      }
+      .active{
+        a {
+          background: $blueColor;
+          background: linear-gradient(90deg, rgba($goldColor,.5)  0%, rgba($goldColor,.2) 72%);
+          color: #000;
+          i{
+            background: #fff;
+          }
+          &::after{
+            background: $blueColor;
+          }
+        }
+      }
+    }
+
+  }
+
+  .mat-drawer-side {
+    border-right: 0;
+  }
+
+  .mat-sidenav-content {
+    background: $greyColor;
+  }
+
+  .mat-drawer-inner-container {
+    background: $lightColor;
+    max-width: 250px;
+
+  }
+}

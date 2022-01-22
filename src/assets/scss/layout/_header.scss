@@ -1,0 +1,23 @@
+
+header{
+  .country-item {
+    img{
+      width: 30px;
+    }
+  }
+  .user-image-dropdown{
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    padding: 3px;
+  }
+  .p-dropdown{
+    &-label{
+      padding: 5px;
+    }
+    &-trigger{
+      padding: 0;
+      width: 2.1rem !important;
+    }
+  }
+}

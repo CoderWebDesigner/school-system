@@ -1,0 +1,14 @@
+{
+  "header":{
+    "log_out":"Logout",
+    "searchPlaceholder":"search for student or parent .."
+  },
+  "notification":{
+    "title":"Notification"
+  },
+  "dashboardTitle":"Dashboard",
+  "chart":{
+    "line":"Expenses",
+    "pie":"Gender"
+  }
+}

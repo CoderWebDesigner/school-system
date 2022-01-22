@@ -1,0 +1,68 @@
+.p-overlaypanel {
+  right: 60px !important;
+  left: auto !important;
+
+  .notifications {
+    max-height: 400px;
+    overflow-y: auto;
+
+    .notification-message {
+      font-size: 14px;
+
+      span {
+        display: inline-block;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        background: #969696;
+      }
+
+      a {
+        color: $blueColor;
+        font-weight: 600;
+      }
+    }
+
+    .new {
+      background: $greyColor;
+
+      .notification-circle.active {
+        background: $goldColor;
+      }
+    }
+
+    .time {
+      font-size: 14px;
+    }
+
+    .date {
+      padding-right: 100px;
+    }
+  }
+
+  &::after,
+  &::before {
+    margin-left: -5px !important;
+  }
+}
+
+.p-overlaypanel.notification-rtl {
+  right: auto !important;
+  left: 60px !important;
+}
+.p-overlay-badge{
+  .p-badge{
+    right: 17px;
+    top: 10px;
+    padding: 0;
+    min-width: 0.6rem;
+    height: 0.6rem;
+  }
+
+}
+
+.d-badge-none{
+  .p-badge{
+    display: none !important;
+  }
+}

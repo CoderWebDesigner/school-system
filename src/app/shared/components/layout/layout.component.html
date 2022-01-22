@@ -1,0 +1,27 @@
+<!-- Layout -->
+<mat-sidenav-container autosize>
+  <!-- Side Nav -->
+  <mat-sidenav
+    #sideNav
+    [opened]="true"
+    position="start"
+    [mode]="mobileQuery.matches ? 'over' : 'side'"
+    [fixedInViewport]="mobileQuery.matches"
+    [ngClass]="{ expandedSideNav: !isExpanded, collapsedSideNav: isExpanded }"
+  >
+    <app-side [sideExpanded]="isExpanded"></app-side>
+  </mat-sidenav>
+  <!-- ./Side Nav -->
+  <mat-sidenav-content>
+    <!-- Header -->
+    <app-header (toggleSideNav)="onToggleSideNav($event)"></app-header>
+    <!-- ./Header -->
+
+    <!-- Content -->
+    <main class="p-4">
+      <router-outlet></router-outlet>
+    </main>
+    <!-- ./Content -->
+  </mat-sidenav-content>
+</mat-sidenav-container>
+<!-- ./Layout -->
