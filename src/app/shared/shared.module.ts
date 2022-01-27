@@ -7,10 +7,17 @@ import { RouterModule } from '@angular/router';
 import { SideComponent } from './components/side/side.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NotificationComponent } from './components/notification/notification.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChartComponent } from './components/chart/chart.component';
 import { NgxModule } from './ngx/ngx.module';
 import { TranslateModule } from '@ngx-translate/core';
+
+import { LayoutheaderComponent } from './components/layoutheader/layoutheader.component';
+import { HeaderonlyComponent } from './components/headeronly/headeronly.component';
+import { DataviewComponent } from './components/dataview/dataview.component';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { DialogComponent } from './components/dialog/dialog.component';
+import { AuthlayoutComponent } from './components/authlayout/authlayout.component';
 
 @NgModule({
   declarations: [
@@ -18,18 +25,26 @@ import { TranslateModule } from '@ngx-translate/core';
     SideComponent,
     HeaderComponent,
     NotificationComponent,
-    ChartComponent
+    ChartComponent,
+    LayoutheaderComponent,
+    HeaderonlyComponent,
+    DataviewComponent,
+    ConfirmDialogComponent,
+    DialogComponent,
+    AuthlayoutComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     MaterialModule,
     PrimengModule,
-    FormsModule,
     NgxModule,
-    TranslateModule
+    TranslateModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  exports:[MaterialModule, PrimengModule,ChartComponent,NgxModule,TranslateModule]
+  exports:[MaterialModule, PrimengModule,ChartComponent,NgxModule,TranslateModule,FormsModule,
+    ReactiveFormsModule,DataviewComponent,ConfirmDialogComponent,DialogComponent]
 })
 export class SharedModule { }
 

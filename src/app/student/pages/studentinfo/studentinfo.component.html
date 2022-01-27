@@ -1,0 +1,371 @@
+<section class="student-info">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 mb-4">
+        <div class="card custom-br custom-shadow border-0">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-5 text-center">
+                <div class="student-icon mx-auto py-3 custom-br">
+                  <img
+                    [src]="student.imagePath"
+                    alt=""
+                    class="img-fluid custom-shadow d-block mx-auto"
+                  />
+                </div>
+                <div class="student-name">
+                  <h6>
+                    <a href="" class="text-dark font-weight-bold">{{
+                      student?.name
+                    }}</a>
+                  </h6>
+                  <p class="text-secondary fs-6">{{ student?.grade }}</p>
+                </div>
+                <div class="student-attendance">
+                  <div class="row px-3">
+                    <div class="col-1 px-0">
+                      <i class="far fa-clock"></i>
+                    </div>
+                    <div class="col-9 px-0 align-self-center">
+                      <p-progressBar
+                        [value]="student?.attendanceRate"
+                        [showValue]="false"
+                      ></p-progressBar>
+                    </div>
+                    <div class="col-2 px-0">
+                      <span
+                        [ngClass]="{
+                          'float-end': lang == 'ltr',
+                          'float-start': lang == 'rtl'
+                        }"
+                        >{{ student?.attendanceRate }} %</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <div class="student-info">
+                  <div class="row">
+                    <div class="col-6">
+                      <span class="label">{{
+                        "students.info.gender" | translate
+                      }}</span>
+                      <p class="px-3 mb-0">
+                        <i
+                          class="fas gender d-inline-block pt-2"
+                          [ngClass]="{
+                            'fa-male': student?.gender == 'male',
+                            'fa-female': !(student?.gender == 'male')
+                          }"
+                        ></i>
+                      </p>
+                    </div>
+                    <div class="col-6">
+                      <span class="label">{{
+                        "students.info.birthDate" | translate
+                      }}</span>
+                      <p>{{ student?.birthDate }}</p>
+                    </div>
+                    <div class="col-6">
+                      <span class="label">{{
+                        "students.info.phone" | translate
+                      }}</span>
+                      <p>{{ student?.phone }}</p>
+                    </div>
+                    <div class="col-6">
+                      <span class="label">{{
+                        "students.info.address" | translate
+                      }}</span>
+                      <p>{{ student?.address }}</p>
+                    </div>
+                    <div class="col-6">
+                      <span class="label">{{
+                        "students.info.city" | translate
+                      }}</span>
+                      <p>{{ student?.city }}</p>
+                    </div>
+                    <div class="col-6">
+                      <span class="label">{{
+                        "students.info.activationStatus" | translate
+                      }}</span>
+                      <p>{{ student?.status }}</p>
+                    </div>
+                  </div>
+                  <div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 mb-4">
+        <div class="card custom-br custom-shadow border-0">
+          <div class="card-body">
+            <h6 class="font-weight-bold mb-3"> <span class="font-weight-bold">Files/Documents</span>  <span class="float-end text-primary"><i class="fas fa-file-medical"></i> add file</span></h6>
+            <p-scrollPanel [style]="{ width: '100%', height: '270px' }">
+              <div class="files">
+                <div class="card file border-0 mb-2 postion-relative">
+                  <div class="card-body p-2 py-0">
+                    <div class="row">
+                      <div class="col-2">
+                        <div class="file-icon text-center">
+                          <i class="far fa-file-alt"></i>
+                        </div>
+                      </div>
+                      <div class="col-10">
+                        <div class="file-info">
+                          <span>شهاده ميلاد.png</span>
+                          <span class="float-end text-grey-color file-size"
+                            >10kb</span
+                          >
+                        </div>
+                        <div class="file-proccess position-absolute">
+                          <button class="p-1 m-1"><i class="pi pi-download"></i></button>
+                          <button class="p-1 m-1 text-secondary"><i class="pi pi-pencil"></i></button>
+                          <button class="p-1 m-1 text-danger"><i class="pi pi-trash"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card file border-0 mb-2 postion-relative">
+                  <div class="card-body p-2 py-0">
+                    <div class="row">
+                      <div class="col-2">
+                        <div class="file-icon text-center">
+                          <i class="far fa-file-alt"></i>
+                        </div>
+                      </div>
+                      <div class="col-10">
+                        <div class="file-info">
+                          <span>شهاده ميلاد.png</span>
+                          <span class="float-end text-grey-color file-size"
+                            >10kb</span
+                          >
+                        </div>
+                        <div class="file-proccess position-absolute">
+                          <button class="p-1 m-1"><i class="pi pi-download"></i></button>
+                          <button class="p-1 m-1 text-secondary"><i class="pi pi-pencil"></i></button>
+                          <button class="p-1 m-1 text-danger"><i class="pi pi-trash"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card file border-0 mb-2 postion-relative">
+                  <div class="card-body p-2 py-0">
+                    <div class="row">
+                      <div class="col-2">
+                        <div class="file-icon text-center">
+                          <i class="far fa-file-alt"></i>
+                        </div>
+                      </div>
+                      <div class="col-10">
+                        <div class="file-info">
+                          <span>شهاده ميلاد.png</span>
+                          <span class="float-end text-grey-color file-size"
+                            >10kb</span
+                          >
+                        </div>
+                        <div class="file-proccess position-absolute">
+                          <button class="p-1 m-1"><i class="pi pi-download"></i></button>
+                          <button class="p-1 m-1 text-secondary"><i class="pi pi-pencil"></i></button>
+                          <button class="p-1 m-1 text-danger"><i class="pi pi-trash"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card file border-0 mb-2 postion-relative">
+                  <div class="card-body p-2 py-0">
+                    <div class="row">
+                      <div class="col-2">
+                        <div class="file-icon text-center">
+                          <i class="far fa-file-alt"></i>
+                        </div>
+                      </div>
+                      <div class="col-10">
+                        <div class="file-info">
+                          <span>شهاده ميلاد.png</span>
+                          <span class="float-end text-grey-color file-size"
+                            >10kb</span
+                          >
+                        </div>
+                        <div class="file-proccess position-absolute">
+                          <button class="p-1 m-1"><i class="pi pi-download"></i></button>
+                          <button class="p-1 m-1 text-secondary"><i class="pi pi-pencil"></i></button>
+                          <button class="p-1 m-1 text-danger"><i class="pi pi-trash"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card file border-0 mb-2 postion-relative">
+                  <div class="card-body p-2 py-0">
+                    <div class="row">
+                      <div class="col-2">
+                        <div class="file-icon text-center">
+                          <i class="far fa-file-alt"></i>
+                        </div>
+                      </div>
+                      <div class="col-10">
+                        <div class="file-info">
+                          <span>شهاده ميلاد.png</span>
+                          <span class="float-end text-grey-color file-size"
+                            >10kb</span
+                          >
+                        </div>
+                        <div class="file-proccess position-absolute">
+                          <button class="p-1 m-1"><i class="pi pi-download"></i></button>
+                          <button class="p-1 m-1 text-secondary"><i class="pi pi-pencil"></i></button>
+                          <button class="p-1 m-1 text-danger"><i class="pi pi-trash"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card file border-0 mb-2 postion-relative">
+                  <div class="card-body p-2 py-0">
+                    <div class="row">
+                      <div class="col-2">
+                        <div class="file-icon text-center">
+                          <i class="far fa-file-alt"></i>
+                        </div>
+                      </div>
+                      <div class="col-10">
+                        <div class="file-info">
+                          <span>شهاده ميلاد.png</span>
+                          <span class="float-end text-grey-color file-size"
+                            >10kb</span
+                          >
+                        </div>
+                        <div class="file-proccess position-absolute">
+                          <button class="p-1 m-1"><i class="pi pi-download"></i></button>
+                          <button class="p-1 m-1 text-secondary"><i class="pi pi-pencil"></i></button>
+                          <button class="p-1 m-1 text-danger"><i class="pi pi-trash"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card file border-0 mb-2 postion-relative">
+                  <div class="card-body p-2 py-0">
+                    <div class="row">
+                      <div class="col-2">
+                        <div class="file-icon text-center">
+                          <i class="far fa-file-alt"></i>
+                        </div>
+                      </div>
+                      <div class="col-10">
+                        <div class="file-info">
+                          <span>شهاده ميلاد.png</span>
+                          <span class="float-end text-grey-color file-size"
+                            >10kb</span
+                          >
+                        </div>
+                        <div class="file-proccess position-absolute">
+                          <button class="p-1 m-1"><i class="pi pi-download"></i></button>
+                          <button class="p-1 m-1 text-secondary"><i class="pi pi-pencil"></i></button>
+                          <button class="p-1 m-1 text-danger"><i class="pi pi-trash"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card file border-0 mb-2 postion-relative">
+                  <div class="card-body p-2 py-0">
+                    <div class="row">
+                      <div class="col-2">
+                        <div class="file-icon text-center">
+                          <i class="far fa-file-alt"></i>
+                        </div>
+                      </div>
+                      <div class="col-10">
+                        <div class="file-info">
+                          <span>شهاده ميلاد.png</span>
+                          <span class="float-end text-grey-color file-size"
+                            >10kb</span
+                          >
+                        </div>
+                        <div class="file-proccess position-absolute">
+                          <button class="p-1 m-1"><i class="pi pi-download"></i></button>
+                          <button class="p-1 m-1 text-secondary"><i class="pi pi-pencil"></i></button>
+                          <button class="p-1 m-1 text-danger"><i class="pi pi-trash"></i></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </p-scrollPanel>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3 mb-4">
+        <div class="card custom-br custom-shadow border-0">
+          <div class="card-body">
+            <h6 class="overflow-hidden"> <span class="font-weight-bold">Payment</span>  <span class="float-end text-primary"><i class="pi pi-credit-card"></i> add payment</span></h6>
+            <h6 class="total  text-secondary"><span class="font-weight-bold">Transaction </span> <span class="font-weight-bold float-end">Amount</span></h6>
+            <p-scrollPanel [style]="{ width: '100%', height: '211px' }">
+              <table class="w-100 mb-1">
+                <tbody>
+                  <tr>
+                    <td>دفعة مصاريف 1</td>
+                    <td><i class="fas fa-arrow-right"></i></td>
+                    <td class="text-end">{{2000 |number}} S.R</td>
+                  </tr>
+                  <tr>
+                    <td>دفعة مصاريف 2</td>
+                    <td><i class="fas fa-arrow-right"></i></td>
+                    <td class="text-end">{{1000 |number}} S.R</td>
+                  </tr>
+                  <tr>
+                    <td>دفعة مصاريف 3</td>
+                    <td><i class="fas fa-arrow-right"></i></td>
+                    <td class="text-end">{{500 |number}} S.R</td>
+                  </tr>
+                  <tr>
+                    <td>دفعة مصاريف 4</td>
+                    <td><i class="fas fa-arrow-right"></i></td>
+                    <td class="text-end">{{400 |number}} S.R</td>
+                  </tr>
+                  <tr>
+                    <td>دفعة مصاريف 5</td>
+                    <td><i class="fas fa-arrow-right"></i></td>
+                    <td class="text-end">{{100 |number}} S.R</td>
+                  </tr>
+                  <tr>
+                    <td>دفعة مصاريف 5</td>
+                    <td><i class="fas fa-arrow-right"></i></td>
+                    <td class="text-end">{{100 |number}} S.R</td>
+                  </tr>
+                  <tr>
+                    <td>دفعة مصاريف 5</td>
+                    <td><i class="fas fa-arrow-right"></i></td>
+                    <td class="text-end">{{100 |number}} S.R</td>
+                  </tr>
+                  <tr>
+                    <td>دفعة مصاريف 5</td>
+                    <td><i class="fas fa-arrow-right"></i></td>
+                    <td class="text-end">{{100 |number}} S.R</td>
+                  </tr>
+                </tbody>
+              </table>
+            </p-scrollPanel>
+
+            <h6 class="total py-2"><span class="font-weight-bold text-secondary">total : </span> <span class="float-end">{{4000 | number}} S.R</span></h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-12">
+        <div class="card custom-br custom-shadow border-0">
+          <div class="card-body">
+            <h6 class="font-weight-bold mb-0">Calendar</h6>
+            <full-calendar [options]="calendarOptions"></full-calendar>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

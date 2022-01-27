@@ -1,4 +1,12 @@
 {
+  "auth":{
+    "login":{
+      "title":"Welcome",
+      "username":"Username",
+      "password":"Password",
+      "btnLabel":"Login"
+    }
+  },
   "header":{
     "log_out":"Logout",
     "searchPlaceholder":"search for student or parent .."
@@ -10,5 +18,29 @@
   "chart":{
     "line":"Expenses",
     "pie":"Gender"
+  },
+  "modules":{
+    "title":"School categories",
+    "info":"You can manage the school through the existing departments"
+  },
+  "students":{
+    "title":"Students",
+    "empty":"No Student Found",
+    "info":{
+      "gender":"Gender",
+      "birthDate":"Birth",
+      "phone":"Phone",
+      "address":"Address",
+      "city":"City",
+      "activationStatus":"Activation Status"
+    },
+    "add":{
+      "btnLabel":"Add",
+      "title":"Add Student"
+    }
+  },
+  "confirmDialog":{
+    "title":"Confirm Delete !",
+    "delete":"Confirm Delete #"
   }
 }

@@ -6,11 +6,12 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule,HttpClient } from '@angular/common/http';
+import { HttpClientModule,HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { SharedModule } from './shared/shared.module';
+import { HttpInterceptorService } from './shared/services/http-interceptor/http-interceptor.service';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { SharedModule } from './shared/shared.module';
 
     })
   ],
-  providers: [],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpInterceptorService, multi: true}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

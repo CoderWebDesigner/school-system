@@ -1,0 +1,23 @@
+.module-header{
+  .icon{
+    display: inline-block;
+    padding: 20px;
+    background: #ffc1a8;
+    height: 210px;
+    border-radius: 50%;
+    line-height: 210px;
+  }
+}
+.module{
+  &-icon{
+    width: 115px;
+    height: 115px;
+    text-align: center;
+    line-height: 145px;
+    margin: 5px auto;
+    border-radius: 10px;
+    i{
+      font-size: 50px;
+    }
+  }
+}

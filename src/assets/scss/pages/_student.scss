@@ -1,0 +1,104 @@
+.student{
+  &-icon{
+    background: $greyColor;
+    margin-bottom: 20px;
+    img{
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      padding: 10px;
+      background: #fff;
+    }
+  }
+  &-name{
+    p{
+      font-size: 14px !important;
+      color: #b8b8b8 !important;
+    }
+  }
+  &-attendance{
+    span{
+      font-size: 14px !important;
+    }
+  }
+  i{
+    color: #b8b8b8 !important;
+  }
+  &-info{
+    .label{
+      color: #b8b8b8 !important;
+    }
+    .gender{
+      font-size: 40px;
+    }
+    .file{
+      box-shadow: 1px 1px 3px #ddd;
+      &-info{
+        font-size: 14px;
+
+      }
+      &-size{
+        color:#b8b8b8 !important
+      }
+      &-proccess{
+        opacity: 0;
+        transition: opacity .4s ease-in-out;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background: #fff;
+        button{
+          background: #fff;
+          width: 30px;
+          height: 30px;
+          line-height: 19px;
+          border-radius: 50%;
+          border:1px solid #ddd;
+          i{
+            font-size: 13px;
+          }
+        }
+      }
+      &:hover{
+        .file-proccess{
+          opacity: 1;
+        }
+      }
+    }
+    tbody{
+      height: 210px;
+    }
+    th,td{
+      font-size: 14px;
+      padding:10px 5px;
+      border-bottom: 1px solid #ddd;
+    }
+    .total{
+      font-size: 14px;
+    }
+  }
+  &-proccess{
+    right: 10px;
+    top: 30px;
+    .dropdown-menu{
+      min-width: 7rem !important;
+    }
+    .dropdown-menu.show{
+      inset: 100% -90px auto auto !important;
+    }
+    .dropdown-menu.dropdown-ltr.show{
+      inset: 100% auto auto -85px !important;
+    }
+  }
+  .dropdown-rtl{
+    right: auto !important;
+    left: 10px !important;
+  }
+}
+.empty{
+  img{
+    width: 200px;
+
+    filter: grayscale(100%);
+  }
+}

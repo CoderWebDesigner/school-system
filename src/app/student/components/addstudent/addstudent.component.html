@@ -1,0 +1,99 @@
+<h3>{{'students.add.title'|translate}}</h3>
+<form class="row" [formGroup]="addStudent" (ngSubmit)="addstudent()">
+  <div class="col-md-6 mb-3">
+    <label class="form-label">الاسم الاول</label>
+    <input formControlName="firstname" type="text" class="form-control" />
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <label class="form-label">الاسم الثانى</label>
+    <input formControlName="secondname" type="text" class="form-control" />
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <label class="form-label">الاسم الثالث </label>
+    <input formControlName="thirdname" type="text" class="form-control" />
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <label class="form-label">الاسم الرابع</label>
+    <input formControlName="forthname" type="text" class="form-control" />
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <label class="form-label">أسم الام </label>
+    <input formControlName="mothername" type="text" class="form-control" />
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <label class="form-label">اسم جد الاب </label>
+    <input
+      formControlName="motherfathername"
+      type="text"
+      class="form-control"
+    />
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <label class="form-label"> اسم جد الام</label>
+    <input formControlName="mothergrandname" type="text" class="form-control" />
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <label class="form-label">العنوان </label>
+    <input formControlName="address" type="text" class="form-control" />
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <label class="form-label">تاريخ الميلاد </label>
+    <input formControlName="birthdate" type="text" class="form-control" />
+  </div>
+  <!--
+  <div class="col-md-6 mb-3">
+  <select  formControlName="gender" class=" gender" name="gender">
+  <option value="" selected="selected" hidden="hidden">النوع</option>
+  <option value="male">ذكر</option>
+  <option value="female">انثي</option>
+  </select>
+  </div>
+  -->
+
+  <div class="col-md-6 mb-3">
+    <label class="form-label">تاريخ بدا العمل </label>
+    <input
+      formControlName="workdate_first_time"
+      type="text"
+      class="form-control"
+    />
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <select formControlName="stage_id" class="gender">
+      <option value="" selected="selected" hidden="hidden">stage_id</option>
+      <option *ngFor="let stage of stages_list">
+        {{ stage.id }}
+      </option>
+    </select>
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <label class="form-label"> صورة </label>
+    <input formControlName="photo" type="text" class="form-control" />
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <label class="form-label">النوع </label>
+    <input formControlName="gender" type="text" class="form-control" />
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <select formControlName="parent_id" class="gender">
+      <option value="" selected="selected" hidden="hidden">parent_id</option>
+      <option *ngFor="let parent of parent_list">
+        {{ parent.id }}
+      </option>
+    </select>
+  </div>
+
+  <button class="btn btn-primary p-3 m-3 w-5" type="submit">add</button>
+</form>

@@ -1,0 +1,91 @@
+<header class=" bg-light-color px-3 py-2">
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="logo">
+        <img src="../../../../assets/images/icons/logo.png" alt="" class="img-fluid">
+      </div>
+    </div>
+    <div class="col-md-6 col-6 order-md-2 order-1 text-end align-self-center" [ngClass]="{'text-end':direction == 'ltr','text-start':direction == 'rtl'}">
+      <!-- Notification -->
+      <p-avatar
+        (click)="op.toggle($event)"
+        icon="pi pi-bell"
+        pBadge
+        severity="danger"
+        [ngClass]="{'notification-rtl':direction == 'rtl','d-badge-none':false}"
+        styleClass="p-mr-2"
+        size="large"
+      >
+      <p-badge severity="danger" pBadge icon="pi pi-bell" *ngIf="0"></p-badge>
+    </p-avatar>
+      <p-overlayPanel #op [showCloseIcon]="false" [style]="{ width: '450px' }" [styleClass]="(direction == 'rtl')? 'notification-rtl':''">
+        <ng-template pTemplate>
+          <app-notification [dir]="direction"></app-notification>
+        </ng-template>
+      </p-overlayPanel>
+      <!-- ./Notification -->
+
+      <!-- Lang -->
+      <p-dropdown
+        [options]="langs"
+        [(ngModel)]="selectedLang"
+        (onChange)="changeLang()"
+        class="px-3"
+      >
+        <ng-template pTemplate="selectedItem">
+          <div class="country-item country-item-value" *ngIf="selectedLang">
+            <img
+            [src]="selectedLang.langIcon"
+            />
+            <span class="px-2">{{ selectedLang.langName }}</span>
+          </div>
+        </ng-template>
+        <ng-template let-country pTemplate="item">
+          <div class="country-item">
+            <img
+            [src]="country.langIcon"
+            />
+            <span class="px-2">{{ country.langName }}</span>
+          </div>
+        </ng-template>
+      </p-dropdown>
+      <!-- ./Lang -->
+
+      <!-- User -->
+      <div class="user d-inline-block">
+        <div class="btn-group" dropdown>
+          <button
+            id="button-basic"
+            dropdownToggle
+            type="button"
+            class="bg-transparent text-grey-color border-0 dropdown-toggle"
+            aria-controls="dropdown-basic"
+          >
+            <p class="text-dark d-inline-block mb-0">
+              <img
+                src="../../assets/images/icons/user.png"
+                alt=""
+                class="img-fluid user-image-dropdown"
+              />
+              احمد رمزي
+            </p>
+          </button>
+          <ul
+            id="dropdown-basic"
+            *dropdownMenu
+            class="dropdown-menu"
+            role="menu"
+            aria-labelledby="button-basic"
+            [ngClass]="{'dropdown-ltr':direction == 'ltr'}"
+          >
+            <li role="menuitem">
+              <a class="dropdown-item" href="#" (click)="logout($event)">تسجيل خروج</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- ./User -->
+    </div>
+  </div>
+</header>

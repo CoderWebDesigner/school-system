@@ -8,4 +8,10 @@ $colors:('gold':$goldColor,'grey':$greyColor,'light':$lightColor,'blue':$blueCol
     .bg-#{$name}-color{
         background: $color !important;
     }
+    .bg-gradient-#{$name}-color{
+      background: linear-gradient(to right ,darken($color,.5),lighten($color,1));
+    }
+}
+.bg-gradient-gold{
+  background: linear-gradient(to right,#fec6a2,#ff828d);
 }

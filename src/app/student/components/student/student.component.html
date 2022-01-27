@@ -1,0 +1,89 @@
+<!-- ./Student -->
+<div
+  class="card student custom-shadow custom-br border-0 m-2 position-relative"
+>
+  <div class="card-body">
+    <div class="student-proccess position-absolute" [ngClass]="{ 'dropdown-rtl': lang != 'ltr'}">
+      <div class="btn-group" dropdown>
+        <button
+          id="button-basic"
+          dropdownToggle
+          type="button"
+          class="bg-transparent text-grey-color border-0 dropdown-toggle"
+          aria-controls="dropdown-basic"
+
+        >
+          <i class="pi pi-ellipsis-h"></i>
+        </button>
+        <ul
+          id="dropdown-basic"
+          *dropdownMenu
+          class="dropdown-menu"
+          role="menu"
+          aria-labelledby="button-basic"
+          [ngClass]="{ 'dropdown-ltr': lang == 'ltr'}"
+        >
+          <li role="menuitem">
+            <button class="p-1 m-1 text-secondary border-0 bg-transparent">
+              <i class="pi pi-pencil"></i>
+              edit
+            </button>
+
+          </li>
+          <li role="menuitem">
+            <button class="p-1 m-1 text-danger border-0 bg-transparent" (click)="confirmDialog(student.id)">
+              <i class="pi pi-trash"></i>
+              delete
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="student-icon mx-auto py-3 custom-br">
+      <img
+        [src]="student.imagePath"
+        alt=""
+        class="img-fluid custom-shadow d-block mx-auto"
+      />
+    </div>
+    <div class="student-name text-center">
+      <h6>
+        <a
+          href=""
+          class="text-dark font-weight-bold"
+          routerLink="info/{{ student.id }}"
+          >{{ student?.name }}</a
+        >
+      </h6>
+      <p class="text-secondary fs-6">{{ student.grade }}</p>
+    </div>
+
+    <div class="student-attendance">
+      <div class="row px-3">
+        <div class="col-1 px-0">
+          <i class="far fa-clock"></i>
+        </div>
+        <div class="col-9 px-0 align-self-center">
+          <p-progressBar
+            [value]="student.attendanceRate"
+            [showValue]="false"
+          ></p-progressBar>
+        </div>
+        <div class="col-2 px-0">
+          <span
+            [ngClass]="{
+              'float-end': lang == 'ltr',
+              'float-start': lang == 'rtl'
+            }"
+            >{{ student.attendanceRate }} %</span
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <app-dialog [display]="display">
+  <app-addstudent></app-addstudent>
+</app-dialog> -->
+<!-- ./Student -->
+

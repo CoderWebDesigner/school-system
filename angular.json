@@ -34,7 +34,7 @@
             "styles": [
               "node_modules/primeicons/primeicons.css",
               "node_modules/primeng/resources/primeng.min.css",
-              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+              "node_modules/primeflex/primeflex.css",
               "node_modules/primeng/resources/themes/lara-light-indigo/theme.css",
               "src/assets/css/custom-font-style.css",
               "src/assets/scss/style.scss"
@@ -50,8 +50,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "5mb",
+                  "maximumError": "10mb"
                 },
                 {
                   "type": "anyComponentStyle",

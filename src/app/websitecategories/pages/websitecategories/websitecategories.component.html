@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="col-md-6 mb-4">
+    <div class="card custom-br custom-shadow border-0 bg-gradient-gold module-header py-2">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-4">
+            <div class="icon">
+              <img src="../../../../assets/images/control-panel.svg" alt="" class="img-fluid">
+            </div>
+          </div>
+          <div class="col-8 align-self-center">
+            <h3 class="custom-font text-weight-bold text-white">{{ 'modules.title' | translate}}</h3>
+            <p class="text-white">{{"modules.info" | translate}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-3 mb-4" *ngFor="let category of categories">
+    <app-websitecategory [category]="category"></app-websitecategory>
+  </div>
+</div>

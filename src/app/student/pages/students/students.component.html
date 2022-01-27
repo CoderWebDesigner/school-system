@@ -1,0 +1,35 @@
+<h4 class="mb-4">{{ "students.title" | translate }} <button (click)="opendialog()"class="btn btn-success custom-br custom-shadow" [ngClass]="{'float-end':lang == 'ltr','float-start':lang == 'rtl'}"><i class="pi pi-user-plus pe-2"></i> {{'students.add.btnLabel'| translate}}</button></h4>
+<!-- Student -->
+<p-dataView
+  #dv
+  [value]="students"
+  [paginator]="students.length != 0"
+  [rows]="8"
+  filterBy="name"
+  layout="grid"
+  [ngClass]="{ 'dataview-rtl': lang == 'rtl' }"
+>
+  <ng-template let-student pTemplate="gridItem">
+    <div class="col-3">
+      <app-student [student]="student" (openConfirmDialog)="onOpenConfirmDialog($event)"></app-student>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="loadingbody">
+    <div class="col-3">
+      <p-skeleton></p-skeleton>
+    </div>
+  </ng-template>
+  <ng-template pTemplate="empty">
+    <div class="empty text-center">
+      <h2> {{'students.empty' | translate}}</h2>
+      <img src="../../../../assets/images/no-students.jpg" alt="" class="img-fluid ">
+    </div>
+  </ng-template>
+</p-dataView>
+<!-- ./Students -->
+
+<!-- Confirm Dialog -->
+<app-dialog [display]="display">
+  <app-addstudent></app-addstudent>
+</app-dialog>
+<!-- ./Confirm Dialog -->

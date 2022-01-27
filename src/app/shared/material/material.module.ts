@@ -1,18 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
-const materialModules = [
-  MatSidenavModule
-]
+import { MatNativeDateModule } from '@angular/material/core';
+const materialModules = [MatSidenavModule, MatNativeDateModule];
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    materialModules
-  ],
-  exports:[
-    materialModules
-  ]
+  imports: [CommonModule, materialModules],
+  providers: [],
+  exports: [materialModules],
 })
-export class MaterialModule { }
+export class MaterialModule {}

@@ -1,0 +1,12 @@
+
+.p-scrollpanel{
+  &-content{
+    padding: 0 !important;
+    overflow: scroll !important;
+  }
+  &-bar-y{
+    width: 3px !important;
+    right: -260px !important;
+    background: #d6d6d6 !important;
+  }
+}
