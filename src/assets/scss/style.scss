@@ -10,6 +10,7 @@
 @import 'helpers/font';
 @import 'helpers/shadow';
 @import 'helpers/border';
+@import 'helpers/align';
 @import 'layout/side';
 @import 'layout/header';
 @import 'components/scroll';
@@ -19,6 +20,7 @@
 @import 'components/progressbar';
 @import 'components/dataview';
 @import 'components/fullcalendar';
+@import 'components/calender';
 @import 'pages/dashboard';
 @import 'pages/modules';
 @import 'pages/student';
@@ -26,6 +28,7 @@
 *{
   font-family: $fontFamily ;
   font-weight: 400;
+  // border: 1px solid red;
 }
 .font-weight-bold{
   font-weight: bold !important;

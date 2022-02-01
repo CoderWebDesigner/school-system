@@ -11,202 +11,244 @@ export class StudentService {
   private students: Student[] = [
     {
       id: 1,
-      name: 'احمد رمزي',
+      firstname: 'احمد رمزي',
       gender: 'male',
-      birthDate: '26/6/1994',
-      imagePath: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
+      birthdate: '26/6/1994',
+      photo: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
       grade: 'الصف الاول الجامعي',
       attendanceRate: 30,
       city:'Cairo',
       status:true,
       phone:'+201002909701',
-      address:'Cairo, Egypt'
+      address:'Cairo, Egypt',
+      stage_id:1,
+      parent_id:1
     },
     {
       id: 2,
-      name: 'Hassan Karim',
+      firstname: 'Hassan Karim',
       gender: 'male',
-      birthDate: '26/6/1994',
-      imagePath: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
+      birthdate: '26/6/1994',
+      photo: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
       grade: 'الصف الثالث الجامعي',
       attendanceRate: 100,
       city:'Alexandria',
       status:false,
       phone:'+201002909701',
-      address:'Alexandria, Egypt'
+      address:'Alexandria, Egypt',
+      stage_id:1,
+      parent_id:1
     },
     {
       id: 3,
-      name: 'Salma mustafa',
+      firstname: 'Salma mustafa',
       gender: 'female',
-      birthDate: '26/6/1994',
-      imagePath: 'https://www.pngitem.com/pimgs/m/4-43793_student-png-college-for-girl-png-transparent-png.png',
+      birthdate: '26/6/1994',
+      photo: 'https://www.pngitem.com/pimgs/m/4-43793_student-png-college-for-girl-png-transparent-png.png',
       grade: 'الصف الثاني الجامعي',
       attendanceRate: 50,
       city:'Aswan',
       status:true,
       phone:'+201002909701',
-      address:'Aswan, Egypt'
+      address:'Aswan, Egypt',
+      stage_id:1,
+      parent_id:1
     },
     {
       id: 4,
-      name: 'احمد رمزي',
+      firstname: 'احمد رمزي',
       gender: 'male',
-      birthDate: '26/6/1994',
-      imagePath: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
+      birthdate: '26/6/1994',
+      photo: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
       grade: 'الصف الاول الجامعي',
       attendanceRate: 30,
       city:'Qalubia',
       status:true,
       phone:'+201002909701',
-      address:'Qalubia, Egypt'
+      address:'Qalubia, Egypt',
+      stage_id:1,
+      parent_id:1
     },
     {
       id: 5,
-      name: 'Hassan Karim',
+      firstname: 'Hassan Karim',
       gender: 'male',
-      birthDate: '26/6/1994',
-      imagePath: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
+      birthdate: '26/6/1994',
+      photo: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
       grade: 'الصف الثالث الجامعي',
       attendanceRate: 100,
       city:'Qalubia',
       status:true,
       phone:'+201002909701',
-      address:'Qalubia, Egypt'
+      address:'Qalubia, Egypt',
+      stage_id:1,
+      parent_id:1
     },
     {
       id: 6,
-      name: 'Salma mustafa',
+      firstname: 'Salma mustafa',
       gender: 'female',
-      birthDate: '26/6/1994',
-      imagePath: 'https://www.pngitem.com/pimgs/m/4-43793_student-png-college-for-girl-png-transparent-png.png',
+      birthdate: '26/6/1994',
+      photo: 'https://www.pngitem.com/pimgs/m/4-43793_student-png-college-for-girl-png-transparent-png.png',
       grade: 'الصف الثاني الجامعي',
       attendanceRate: 50,
       city:'Qalubia',
       status:true,
-      address:'Qalubia, Egypt'
+      address:'Qalubia, Egypt',
+      stage_id:1,
+      parent_id:1
     },
     {
       id: 7,
-      name: 'احمد رمزي',
+      firstname: 'احمد رمزي',
       gender: 'male',
-      birthDate: '26/6/1994',
-      imagePath: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
+      birthdate: '26/6/1994',
+      photo: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
       grade: 'الصف الاول الجامعي',
       attendanceRate: 30,
       city:'Qalubia',
       status:true,
+      stage_id:1,
+      parent_id:1
     },
     {
       id: 8,
-      name: 'Hassan Karim',
+      firstname: 'Hassan Karim',
       gender: 'male',
-      birthDate: '26/6/1994',
-      imagePath: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
+      birthdate: '26/6/1994',
+      photo: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
       grade: 'الصف الثالث الجامعي',
       attendanceRate: 100,
       city:'Qalubia',
       status:true,
-      phone:'+201002909701'
+      phone:'+201002909701',
+      stage_id:1,
+      parent_id:1
     },
     {
       id: 9,
-      name: 'Salma mustafa',
+      firstname: 'Salma mustafa',
       gender: 'female',
-      birthDate: '26/6/1994',
-      imagePath: 'https://www.pngitem.com/pimgs/m/4-43793_student-png-college-for-girl-png-transparent-png.png',
+      birthdate: '26/6/1994',
+      photo: 'https://www.pngitem.com/pimgs/m/4-43793_student-png-college-for-girl-png-transparent-png.png',
       grade: 'الصف الثاني الجامعي',
       attendanceRate: 50,
       city:'Qalubia',
       status:true,
       phone:'+201002909701',
-      address:'Qalubia, Egypt'
+      address:'Qalubia, Egypt',
+      stage_id:1,
+      parent_id:1
     },
     {
       id: 10,
-      name: 'احمد رمزي',
+      firstname: 'احمد رمزي',
       gender: 'male',
-      birthDate: '26/6/1994',
-      imagePath: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
+      birthdate: '26/6/1994',
+      photo: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
       grade: 'الصف الاول الجامعي',
       attendanceRate: 30,
       city:'Qalubia',
       status:true,
       phone:'+201002909701',
-      address:'Qalubia, Egypt'
+      address:'Qalubia, Egypt',
+      stage_id:1,
+      parent_id:1
     },
     {
       id: 11,
-      name: 'Hassan Karim',
+      firstname: 'Hassan Karim',
       gender: 'male',
-      birthDate: '26/6/1994',
-      imagePath: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
+      birthdate: '26/6/1994',
+      photo: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
       grade: 'الصف الثالث الجامعي',
       attendanceRate: 100,
       city:'Qalubia',
       status:true,
       phone:'+201002909701',
-      address:'Qalubia, Egypt'
+      address:'Qalubia, Egypt',
+      stage_id:1,
+      parent_id:1
     },
     {
       id: 12,
-      name: 'Salma mustafa',
+      firstname: 'Salma mustafa',
       gender: 'female',
-      birthDate: '26/6/1994',
-      imagePath: 'https://www.pngitem.com/pimgs/m/4-43793_student-png-college-for-girl-png-transparent-png.png',
+      birthdate: '26/6/1994',
+      photo: 'https://www.pngitem.com/pimgs/m/4-43793_student-png-college-for-girl-png-transparent-png.png',
       grade: 'الصف الثاني الجامعي',
       attendanceRate: 50,
       city:'Qalubia',
       status:true,
       phone:'+201002909701',
-      address:'Qalubia, Egypt'
+      address:'Qalubia, Egypt',
+      stage_id:1,
+      parent_id:1
     },
     {
       id: 13,
-      name: 'احمد رمزي',
+      firstname: 'احمد رمزي',
       gender: 'male',
-      birthDate: '26/6/1994',
-      imagePath: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
+      birthdate: '26/6/1994',
+      photo: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
       grade: 'الصف الاول الجامعي',
       attendanceRate: 30,
       city:'Qalubia',
       status:true,
       phone:'+201002909701',
-      address:'Qalubia, Egypt'
+      address:'Qalubia, Egypt',
+      stage_id:1,
+      parent_id:1
     },
     {
       id: 14,
-      name: 'Hassan Karim',
+      firstname: 'Hassan Karim',
       gender: 'male',
-      birthDate: '26/6/1994',
-      imagePath: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
+      birthdate: '26/6/1994',
+      photo: 'https://www.nssi.com/media/wysiwyg/images/2.jpg',
       grade: 'الصف الثالث الجامعي',
       attendanceRate: 100,
       city:'Qalubia',
       status:true,
       phone:'+201002909701',
-      address:'Qalubia, Egypt'
+      address:'Qalubia, Egypt',
+      stage_id:1,
+      parent_id:1
     },
     {
       id: 15,
-      name: 'Salma mustafa',
+      firstname: 'Salma mustafa',
       gender: 'female',
-      birthDate: '26/6/1994',
-      imagePath: 'https://www.pngitem.com/pimgs/m/4-43793_student-png-college-for-girl-png-transparent-png.png',
+      birthdate: '26/6/1994',
+      photo: 'https://www.pngitem.com/pimgs/m/4-43793_student-png-college-for-girl-png-transparent-png.png',
       grade: 'الصف الثاني الجامعي',
       attendanceRate: 50,
       city:'Qalubia',
       status:true,
       phone:'+201002909701',
-      address:'Qalubia, Egypt'
+      address:'Qalubia, Egypt',
+      stage_id:1,
+      parent_id:1
     },
   ];
   private _listStudentsApiUrl = "api/students.json";
+  private _addStudentsApiUrl = "api/students/add.json";
+  private _editStudentsApiUrl = "api/students/edit.json";
+  private _deleteStudentsApiUrl = "api/students/delete.json";
   constructor(private http:HttpClient) {}
   getStudents() {
     return this.students;
   }
+  addStudent(student:Student){
+    return this.http.post(`${environment.baseUrl}${this._addStudentsApiUrl}`,student).pipe(map((res:any) => res['data']))
+  }
   // getStudents(){
   //   return this.http.get(`${environment.baseUrl}${this._listStudentsApiUrl}`).pipe(map((res:any) => res['data']))
   // }
+  editStudent(id:number,studentInfo:any){
+    return this.http.post(`${environment.baseUrl}${this._editStudentsApiUrl}`,studentInfo).pipe(map((res:any)=> res['data'] ))
+  }
+  deleteStudent(id:number){
+    return this.http.post(`${environment.baseUrl}${this._editStudentsApiUrl}`,id).pipe(map((res:any)=> res['data'] ))
+  }
 }

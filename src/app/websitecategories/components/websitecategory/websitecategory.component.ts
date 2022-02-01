@@ -11,7 +11,6 @@ export class WebsitecategoryComponent implements OnInit {
   lang:any;
   constructor(private langService:LangService) { }
   ngOnInit(): void {
-    console.log(this.category)
     this.langService.currentLang.subscribe((result:any)=>{
       this.lang = result
     })

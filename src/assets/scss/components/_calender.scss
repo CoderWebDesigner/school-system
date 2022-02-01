@@ -1,0 +1,23 @@
+.p-calendar {
+  width: 100%;
+}
+.datepicker-rtl{
+  .p-calendar {
+    .p-inputtext {
+      border-top-right-radius: 6px !important;
+      border-bottom-right-radius: 6px !important;
+      border-top-left-radius: 0 !important;
+      border-bottom-left-radius: 0 !important;
+    }
+
+    &-w-btn {
+      .p-datepicker-trigger {
+        border-top-left-radius: 6px !important;
+        border-bottom-left-radius: 6px !important;
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+      }
+    }
+  }
+
+}

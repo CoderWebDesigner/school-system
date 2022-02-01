@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?w20ypv');
-  src:  url('../fonts/icomoon.eot?w20ypv#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?w20ypv') format('truetype'),
-    url('../fonts/icomoon.woff?w20ypv') format('woff'),
-    url('../fonts/icomoon.svg?w20ypv#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?xs0sa2');
+  src:  url('../fonts/icomoon.eot?xs0sa2#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?xs0sa2') format('truetype'),
+    url('../fonts/icomoon.woff?xs0sa2') format('woff'),
+    url('../fonts/icomoon.svg?xs0sa2#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,30 +25,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-male:before {
+  content: "\e907";
+}
+.icon-female:before {
+  content: "\e908";
+}
 .icon-accounts:before {
   content: "\e900";
-  color: inherit;
+  
 }
 .icon-business-report:before {
   content: "\e901";
-  color: inherit;
+
 }
 .icon-expenses:before {
   content: "\e902";
 }
 .icon-home:before {
   content: "\e903";
-  color: inherit;
+
 }
 .icon-parents:before {
   content: "\e904";
-  color: inherit;
+
 }
 .icon-students:before {
   content: "\e905";
-  color: inherit;
+
 }
 .icon-teacher:before {
   content: "\e906";
-  color: inherit;
+
 }

@@ -15,7 +15,6 @@ import { TranslateModule } from '@ngx-translate/core';
 import { LayoutheaderComponent } from './components/layoutheader/layoutheader.component';
 import { HeaderonlyComponent } from './components/headeronly/headeronly.component';
 import { DataviewComponent } from './components/dataview/dataview.component';
-import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 import { DialogComponent } from './components/dialog/dialog.component';
 import { AuthlayoutComponent } from './components/authlayout/authlayout.component';
 
@@ -29,7 +28,6 @@ import { AuthlayoutComponent } from './components/authlayout/authlayout.componen
     LayoutheaderComponent,
     HeaderonlyComponent,
     DataviewComponent,
-    ConfirmDialogComponent,
     DialogComponent,
     AuthlayoutComponent
   ],
@@ -44,7 +42,7 @@ import { AuthlayoutComponent } from './components/authlayout/authlayout.componen
     ReactiveFormsModule
   ],
   exports:[MaterialModule, PrimengModule,ChartComponent,NgxModule,TranslateModule,FormsModule,
-    ReactiveFormsModule,DataviewComponent,ConfirmDialogComponent,DialogComponent]
+    ReactiveFormsModule,DataviewComponent,DialogComponent]
 })
 export class SharedModule { }
 

@@ -17,10 +17,8 @@ export class SideComponent implements OnInit {
   ngOnInit(): void {
     this.routes = this.routeService.getRoutes();
     this.sideExpanded = true
-    console.log(this.sideExpanded)
     this.langService.currentLang.subscribe((result:any)=>{
       this.lang = result;
-      console.log(this.lang)
       this.cdr.detectChanges();
     })
   }

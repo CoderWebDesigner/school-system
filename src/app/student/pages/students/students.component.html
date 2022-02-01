@@ -1,4 +1,17 @@
-<h4 class="mb-4">{{ "students.title" | translate }} <button (click)="opendialog()"class="btn btn-success custom-br custom-shadow" [ngClass]="{'float-end':lang == 'ltr','float-start':lang == 'rtl'}"><i class="pi pi-user-plus pe-2"></i> {{'students.add.btnLabel'| translate}}</button></h4>
+<h4 class="mb-4">
+  {{ "students.title" | translate }}
+  <div [ngClass]="{'float-start': lang == 'rtl', 'float-end': lang == 'ltr'  }">
+    <button
+    pButton
+    type="button"
+    label="{{'students.student.add.btnLabel' | translate}}"
+    class="p-button-success custom-br custom-shadow"
+    icon="pi pi-user-plus"
+    (click)="opendialog('add')"
+  ></button>
+  </div>
+
+</h4>
 <!-- Student -->
 <p-dataView
   #dv
@@ -11,7 +24,11 @@
 >
   <ng-template let-student pTemplate="gridItem">
     <div class="col-3">
-      <app-student [student]="student" (openConfirmDialog)="onOpenConfirmDialog($event)"></app-student>
+      <app-student
+        [student]="student"
+        (getDialogType)="getType($event)"
+        (getStudentId)="getId($event)"
+      ></app-student>
     </div>
   </ng-template>
   <ng-template pTemplate="loadingbody">
@@ -21,15 +38,38 @@
   </ng-template>
   <ng-template pTemplate="empty">
     <div class="empty text-center">
-      <h2> {{'students.empty' | translate}}</h2>
-      <img src="../../../../assets/images/no-students.jpg" alt="" class="img-fluid ">
+      <h2>{{ "students.empty" | translate }}</h2>
+      <img
+        src="../../../../assets/images/no-students.jpg"
+        alt=""
+        class="img-fluid"
+      />
     </div>
   </ng-template>
 </p-dataView>
 <!-- ./Students -->
 
-<!-- Confirm Dialog -->
-<app-dialog [display]="display">
-  <app-addstudent></app-addstudent>
+<!-- Dialog -->
+<app-dialog
+  [display]="display"
+  [dialogHeader]="
+    dialogType == 'add'
+      ? ('students.student.add.title' | translate)
+      : dialogType == 'edit'
+      ? ('students.student.edit.title' | translate)
+      : ('students.student.delete.title' | translate)
+  "
+  [width]="(dialogType == 'delete')?'30vw':''"
+  [titleColor] ="(dialogType == 'delete')? '#ff6666':''"
+>
+  <ng-container *ngIf="dialogType == 'add'">
+    <app-addstudent></app-addstudent>
+  </ng-container>
+  <ng-container *ngIf="dialogType == 'edit'">
+    <app-editstudent [id]="studentId"></app-editstudent>
+  </ng-container>
+  <ng-container *ngIf="dialogType == 'delete'">
+    <app-deletestudent [studentId]="studentId"></app-deletestudent>
+  </ng-container>
 </app-dialog>
-<!-- ./Confirm Dialog -->
+<!-- ./Dialog -->

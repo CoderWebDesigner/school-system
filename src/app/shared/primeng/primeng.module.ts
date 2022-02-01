@@ -16,8 +16,9 @@ import { FullCalendarModule } from '@fullcalendar/angular';
 import interactionPlugin from '@fullcalendar/interaction';
 import dayGridPlugin from '@fullcalendar/daygrid';
 import {ScrollPanelModule} from 'primeng/scrollpanel';
-import {ConfirmDialogModule} from 'primeng/confirmdialog';
 import {DialogModule} from 'primeng/dialog';
+import {InputTextModule} from 'primeng/inputtext';
+import {FileUploadModule} from 'primeng/fileupload';
 FullCalendarModule.registerPlugins([
   dayGridPlugin,
   interactionPlugin
@@ -36,8 +37,9 @@ const primengModules= [
   CalendarModule,
   FullCalendarModule,
   ScrollPanelModule,
-  ConfirmDialogModule,
-  DialogModule
+  DialogModule,
+  InputTextModule,
+  FileUploadModule
 ]
 @NgModule({
   declarations: [],

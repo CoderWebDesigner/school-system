@@ -34,9 +34,67 @@
       "city":"المدينة",
       "activationStatus":"حالة التاكيد"
     },
-    "add":{
-      "btnLabel":"إضافة",
-      "title":"اضافة تلميذ"
+    "student":{
+      "add":{
+        "btnLabel":"إضافة",
+        "title":"اضافة تلميذ",
+        "form":{
+          "photo":{
+            "errorMessage":"حقل الصوره مطلوب"
+          },
+          "firstname":{
+            "text":"اسم الطالب الاول",
+            "placeholder":"علي ",
+            "errorMessage":"حقل اسم الطالب الاول مطلوب"
+          },
+          "birthDate":{
+            "text":"تاريخ الميلاد",
+            "placeholder":"26/6/2000",
+            "errorMessage":"حقل تاريخ الميلاد مطلوب"
+          },
+          "address":{
+            "text":"العنوان",
+            "placeholder":"القاهره , مصر ",
+            "errorMessage":"حقل العنوان مطلوب"
+          },
+          "gender":{
+            "text":"النوع",
+            "placeholder":"إختيار النوع",
+            "errorMessage":"حقل اختيار النوع مطلوب"
+
+          },
+          "parent":{
+            "text":"ولي الامر",
+            "placeholder":"إختيار ولي الامر",
+            "errorMessage":"حقل ولي الامر مطلوب"
+
+          },
+          "stage":{
+            "text":"مرحلة دراسية",
+            "placeholder":"إختيار مرحلة دراسية",
+            "errorMessage":"حقل المرحلة الدراسية مطلوب"
+
+          }
+        }
+      },
+      "edit":{
+        "btnLabel":"تعديل",
+        "title":"تعديل طالب"
+      },
+      "delete":{
+        "message":"هل متاكد من مسح ",
+        "btnLabel":"مسح",
+        "title":"مسح طالب",
+        "cancelBtnLabel":"إلغاء"
+      }
+    },
+    "attachments":{
+      "title":"الملفات",
+      "btnLabel":"إضافة ملف",
+      "empty":"لا يوجد ملفات",
+      "add":{
+        "file":"رفع ملفاتك"
+      }
     }
   },
   "confirmDialog":{

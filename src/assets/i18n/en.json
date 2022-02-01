@@ -34,9 +34,64 @@
       "city":"City",
       "activationStatus":"Activation Status"
     },
-    "add":{
-      "btnLabel":"Add",
-      "title":"Add Student"
+    "student":{
+      "add":{
+        "btnLabel":"Add",
+        "title":"Add Student",
+        "form":{
+          "photo":{
+            "errorMessage":"Photo field Requied"
+          },
+          "firstname":{
+            "text":"Student first name",
+            "placeholder":"Ali",
+            "errorMessage":"Student firstname field Required"
+          },
+          "birthDate":{
+            "text":"Birth date",
+            "placeholder":"26/6/2000",
+            "errorMessage":"Birth date field Required"
+          },
+          "address":{
+            "text":"Address",
+            "placeholder":"Cairo,Egypt",
+            "errorMessage":"Address field Required"
+          },
+          "gender":{
+            "text":"Gender",
+            "placeholder":"Select Gender",
+            "errorMessage":"Gender field Required"
+          },
+          "parent":{
+            "text":"Parent",
+            "placeholder":"Select Parent",
+            "errorMessage":"Parent field Required"
+          },
+          "stage":{
+            "text":"Stage",
+            "placeholder":"Select Stage",
+            "errorMessage":"Stage field Required"
+          }
+        }
+      },
+      "edit":{
+        "btnLabel":"Edit",
+        "title":"Edit Student"
+      },
+      "delete":{
+        "message":"Are you Sure to delete ",
+        "btnLabel":"Delete",
+        "title":"Delete Student",
+        "cancelBtnLabel":"Cancel"
+      }
+    },
+    "attachments":{
+      "title":"Files",
+      "btnLabel":"Add File",
+      "empty":"No Attachment Found",
+      "add":{
+        "file":"Upload Your Files"
+      }
     }
   },
   "confirmDialog":{

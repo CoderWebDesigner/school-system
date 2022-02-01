@@ -15,7 +15,6 @@ export class AppComponent  implements AfterViewInit{
   ngAfterViewInit() {
     this.langService.currentLang.subscribe((result:any)=>{
       this.lang = result;
-      console.log(this.lang)
       this.cdr.detectChanges();
     })
   }

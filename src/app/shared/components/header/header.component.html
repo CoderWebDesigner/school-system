@@ -1,10 +1,12 @@
 <header class=" bg-light-color px-3 py-2">
 
   <div class="row">
-    <div class="col-md-3 col-6  align-self-center order-1">
+    <div class="col-md-3 col-6  align-self-center order-1 py-0">
       <button class="btn" (click)="collapseSideNav()"><i class="pi pi-bars"></i></button>
     </div>
-    <div class="col-md-5 order-md-1 order-2">
+    <div class="col-md-5 order-md-1 align-self-center order-2">
+
+      <!-- Search -->
       <div class="search">
         <div class="input-group border-0 border-bottom">
           <input
@@ -19,8 +21,10 @@
           ></span>
         </div>
       </div>
+      <!-- ./Search -->
+
     </div>
-    <div class="col-md-4 col-6 order-md-2 order-1 text-end" [ngClass]="{'text-end':direction == 'ltr','text-start':direction == 'rtl'}">
+    <div class="col-md-4 col-6 order-md-2 order-1 text-end py-0" [ngClass]="{'text-end':direction == 'ltr','text-start':direction == 'rtl'}">
       <!-- Notification -->
       <p-avatar
         (click)="op.toggle($event)"
@@ -51,6 +55,7 @@
           <div class="country-item country-item-value" *ngIf="selectedLang">
             <img
             [src]="selectedLang.langIcon"
+            [alt]="selectedLang.langName"
             />
             <span class="px-2">{{ selectedLang.langName }}</span>
           </div>
@@ -59,6 +64,7 @@
           <div class="country-item">
             <img
             [src]="country.langIcon"
+            [alt]="country.langName"
             />
             <span class="px-2">{{ country.langName }}</span>
           </div>

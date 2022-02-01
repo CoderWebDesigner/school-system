@@ -21,19 +21,19 @@
           class="dropdown-menu"
           role="menu"
           aria-labelledby="button-basic"
-          [ngClass]="{ 'dropdown-ltr': lang == 'ltr'}"
+          [ngClass]="{ 'dropdown-ltr': lang == 'ltr','dropdown-rtl':lang =='rtl'}"
         >
           <li role="menuitem">
-            <button class="p-1 m-1 text-secondary border-0 bg-transparent">
+            <button class="p-1 m-1 text-secondary border-0 bg-transparent" (click)="openDialog('edit',student.id)">
               <i class="pi pi-pencil"></i>
-              edit
+              {{'students.student.edit.btnLabel' | translate}}
             </button>
 
           </li>
           <li role="menuitem">
-            <button class="p-1 m-1 text-danger border-0 bg-transparent" (click)="confirmDialog(student.id)">
+            <button class="p-1 m-1 text-danger border-0 bg-transparent" (click)="openDialog('delete',student.id)">
               <i class="pi pi-trash"></i>
-              delete
+              {{'students.student.delete.btnLabel' | translate}}
             </button>
           </li>
         </ul>
@@ -41,7 +41,7 @@
     </div>
     <div class="student-icon mx-auto py-3 custom-br">
       <img
-        [src]="student.imagePath"
+        [src]="student.photo"
         alt=""
         class="img-fluid custom-shadow d-block mx-auto"
       />
@@ -52,7 +52,7 @@
           href=""
           class="text-dark font-weight-bold"
           routerLink="info/{{ student.id }}"
-          >{{ student?.name }}</a
+          >{{ student?.firstname }}</a
         >
       </h6>
       <p class="text-secondary fs-6">{{ student.grade }}</p>

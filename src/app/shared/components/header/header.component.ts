@@ -26,7 +26,6 @@ export class HeaderComponent implements OnInit {
     this.direction = (this.selectedLang.langName == "ar")?'rtl':'ltr';
     this.langService.changeLang(this.direction)
     localStorage.setItem('direction',this.direction)
-    console.log(localStorage.getItem('direction'))
   }
   collapseSideNav(){
     this.isExpanded = ! this.isExpanded

@@ -1,8 +1,8 @@
 export interface Student {
   id:number;
-  name:string;
-  birthDate:string;
-  imagePath:string;
+  firstname:string;
+  birthdate:string;
+  photo:string;
   grade:string;
   attendanceRate:number;
   gender:string;
@@ -10,4 +10,6 @@ export interface Student {
   status:boolean;
   phone?:string;
   address?:string;
+  stage_id:number;
+  parent_id:number;
 }

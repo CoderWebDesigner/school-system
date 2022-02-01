@@ -8,6 +8,11 @@ import { StudentComponent } from './components/student/student.component';
 import { StudentinfoComponent } from './pages/studentinfo/studentinfo.component';
 import { ConfirmationService } from 'primeng/api';
 import { AddstudentComponent } from './components/addstudent/addstudent.component';
+import { EditstudentComponent } from './components/editstudent/editstudent.component';
+import { DeletestudentComponent } from './components/deletestudent/deletestudent.component';
+import { AddattachmentComponent } from './components/addattachment/addattachment.component';
+import { EditattachmentComponent } from './components/editattachment/editattachment.component';
+import { DeleteattachmentComponent } from './components/deleteattachment/deleteattachment.component';
 
 
 @NgModule({
@@ -15,7 +20,12 @@ import { AddstudentComponent } from './components/addstudent/addstudent.componen
     StudentsComponent,
     StudentComponent,
     StudentinfoComponent,
-    AddstudentComponent
+    AddstudentComponent,
+    EditstudentComponent,
+    DeletestudentComponent,
+    AddattachmentComponent,
+    EditattachmentComponent,
+    DeleteattachmentComponent
   ],
   imports: [
     CommonModule,

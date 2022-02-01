@@ -9,9 +9,7 @@
   [resizable]="false"
 >
   <ng-template pTemplate="header">
-    {{ dialogHeader }}
+    <h6 class="font-weight-bold mb-0" [style.color]="titleColor">{{ dialogHeader }}</h6>
   </ng-template>
   <ng-content></ng-content>
-
-  <ng-template pTemplate="footer"> //buttons </ng-template>
 </p-dialog>

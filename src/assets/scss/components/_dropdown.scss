@@ -1,3 +1,30 @@
 .dropdown-menu.dropdown-ltr.show{
   inset: 100% auto auto -19px !important;
 }
+.dropdown-fullwidth{
+  .p-dropdown{
+    width: 100%;
+    &-label{
+      font-family: $fontFamily !important;
+    }
+  }
+}
+.dropdown-rtl{
+  text-align: right;
+}
+.dropdown-fullwidth.dropdown-rtl{
+  .p-dropdown{
+    &-filter{
+      padding-right: 0.75rem !important;
+      margin-right: auto !important;
+      padding-left: 1.75rem !important;
+      margin-left: -1.75rem !important;
+      &-icon{
+        right:auto !important;
+        left: 0.75rem !important;
+      }
+    }
+  }
+
+}
+

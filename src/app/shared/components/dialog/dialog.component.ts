@@ -10,6 +10,7 @@ export class DialogComponent implements OnInit {
   @Input() display!:boolean;
   @Input() dialogHeader!: string;
   @Input() width:string = '50vw';
+  @Input()titleColor!:string;
   constructor(private dialogService:DialogService) { }
 
   ngOnInit(): void {

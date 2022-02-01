@@ -12,7 +12,6 @@ export class NotificationComponent implements OnInit {
 
   ngOnInit(): void {
     this.langService.currentLang.subscribe((result:string)=>{
-      console.log(result)
       this.direction = result;
     })
   }

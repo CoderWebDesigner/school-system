@@ -1,8 +1,9 @@
-.student{
-  &-icon{
+.student {
+  &-icon {
     background: $greyColor;
     margin-bottom: 20px;
-    img{
+
+    img {
       width: 150px;
       height: 150px;
       border-radius: 50%;
@@ -10,95 +11,160 @@
       background: #fff;
     }
   }
-  &-name{
-    p{
+
+  &-name {
+    p {
       font-size: 14px !important;
       color: #b8b8b8 !important;
     }
   }
-  &-attendance{
-    span{
+
+  &-attendance {
+    span {
       font-size: 14px !important;
     }
   }
-  i{
+
+  i {
     color: #b8b8b8 !important;
   }
-  &-info{
-    .label{
+
+  &-info {
+    .label {
       color: #b8b8b8 !important;
     }
-    .gender{
+
+    .gender {
       font-size: 40px;
     }
-    .file{
+
+    .files {
+      height: 270px
+    }
+
+    .payment {
+      height: 336px;
+    }
+
+    .file {
       box-shadow: 1px 1px 3px #ddd;
-      &-info{
+
+      &-info {
         font-size: 14px;
 
       }
-      &-size{
-        color:#b8b8b8 !important
+
+      &-size {
+        color: #b8b8b8 !important
       }
-      &-proccess{
+
+
+      &-proccess {
         opacity: 0;
         transition: opacity .4s ease-in-out;
         z-index: 1;
         top: 0;
         right: 0;
         background: #fff;
-        button{
+
+        button {
           background: #fff;
           width: 30px;
           height: 30px;
           line-height: 19px;
           border-radius: 50%;
-          border:1px solid #ddd;
-          i{
+          border: 1px solid #ddd;
+
+          i {
             font-size: 13px;
           }
         }
+
+        &-rtl {
+          right: auto !important;
+          left: 0 !important;
+        }
       }
-      &:hover{
-        .file-proccess{
+
+      &:hover {
+        .file-proccess {
           opacity: 1;
         }
       }
     }
-    tbody{
+
+    tbody {
       height: 210px;
     }
-    th,td{
+
+    th,
+    td {
       font-size: 14px;
-      padding:10px 5px;
+      padding: 10px 5px;
       border-bottom: 1px solid #ddd;
     }
-    .total{
+
+    .total {
       font-size: 14px;
     }
   }
-  &-proccess{
+
+  &-proccess {
     right: 10px;
     top: 30px;
-    .dropdown-menu{
+
+    .dropdown-menu {
       min-width: 7rem !important;
     }
-    .dropdown-menu.show{
+
+    .dropdown-menu.show {
       inset: 100% -90px auto auto !important;
     }
-    .dropdown-menu.dropdown-ltr.show{
+
+    .dropdown-menu.dropdown-ltr.show {
       inset: 100% auto auto -85px !important;
     }
   }
-  .dropdown-rtl{
+
+  .dropdown-rtl {
     right: auto !important;
     left: 10px !important;
   }
 }
-.empty{
-  img{
+
+.empty {
+  img {
     width: 200px;
 
     filter: grayscale(100%);
+  }
+}
+
+.gender {
+  cursor: pointer;
+
+  input[type=radio]:checked+label>img {
+    border: 20px solid rgb(228, 207, 94);
+  }
+}
+
+.selected-gender {
+  border-color: $goldColor !important;
+  color: $goldColor;
+  background: rgba($goldColor, .1);
+}
+
+.edit-image-btn {
+  bottom: 20px;
+  right: 110px;
+
+  button {
+    background: #fff;
+    color: grey;
+    border: 0;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
   }
 }

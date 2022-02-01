@@ -1,0 +1,6 @@
+<p>{{'students.student.delete.message' | translate}} <span class="font-weight-bold">{{student.firstname}}</span> ?</p>
+<div class="text-end">
+  <button pButton  (click)="delete(student.id)" class="p-button-danger custom-font">{{'students.student.delete.btnLabel'| translate}}</button>
+  <button pButton  (click)="closeDialog()" class="p-button-link text-dark custom-font">{{'students.student.delete.cancelBtnLabel'| translate}}</button>
+
+</div>

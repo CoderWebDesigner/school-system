@@ -1,4 +1,5 @@
-<form class="row" [formGroup]="addStudent" (ngSubmit)="onSubmit()">
+
+<form class="row" [formGroup]="editStudent" (ngSubmit)="onSubmit()">
   <div class="col-md-6">
     <!-- Image -->
     <div class="col-12 mb-3">
@@ -14,14 +15,14 @@
         <!-- Validation Requied -->
         <div
           *ngIf="
-            addStudent.get('photo')?.invalid &&
-            addStudent.get('photo')?.errors &&
-            (addStudent.get('photo')?.dirty || addStudent.get('photo')?.touched)
+          editStudent.get('photo')?.invalid &&
+          editStudent.get('photo')?.errors &&
+            (editStudent.get('photo')?.dirty || editStudent.get('photo')?.touched)
           "
         >
           <div
             class="form-text text-danger text-center"
-            *ngIf="addStudent.controls['photo']?.errors?.['required']"
+            *ngIf="editStudent.controls['photo']?.errors?.['required']"
           >
             {{ "students.student.add.form.photo.errorMessage" | translate }}
           </div>
@@ -76,17 +77,17 @@
           <!-- Validation Requied -->
           <div
             *ngIf="
-              addStudent.get('gender')?.invalid &&
-              addStudent.get('gender')?.errors &&
-              (addStudent.get('gender')?.dirty ||
-                addStudent.get('gender')?.touched)
+              editStudent.get('gender')?.invalid &&
+              editStudent.get('gender')?.errors &&
+              (editStudent.get('gender')?.dirty ||
+                editStudent.get('gender')?.touched)
             "
           >
             <div
               class="form-text text-danger"
-              *ngIf="addStudent.controls['gender']?.errors?.['required']"
+              *ngIf="editStudent.controls['gender']?.errors?.['required']"
             >
-              {{ "students.add.form.gender.errorMessage" | translate }}
+              {{ "students.student.add.form.gender.errorMessage" | translate }}
             </div>
           </div>
           <!-- ./Validation Requied -->
@@ -113,16 +114,16 @@
       <!-- Validation Requied -->
       <div
         *ngIf="
-          addStudent.get('firstname')?.invalid &&
-          addStudent.get('firstname')?.errors &&
-          (addStudent.get('firstname')?.dirty || addStudent.get('firstname')?.touched)
+          editStudent.get('firstname')?.invalid &&
+          editStudent.get('firstname')?.errors &&
+          (editStudent.get('firstname')?.dirty || editStudent.get('firstname')?.touched)
         "
       >
         <div
           class="form-text text-danger"
-          *ngIf="addStudent.controls['firstname']?.errors?.['required']"
+          *ngIf="editStudent.controls['firstname']?.errors?.['required']"
         >
-          {{ "students.add.form.firstname.errorMessage" | translate }}
+          {{ "students.student.add.form.firstname.errorMessage" | translate }}
         </div>
       </div>
       <!-- ./Validation Requied -->
@@ -147,16 +148,16 @@
       <!-- Validation Requied -->
       <div
         *ngIf="
-          addStudent.get('birthdate')?.invalid &&
-          addStudent.get('birthdate')?.errors &&
-          (addStudent.get('birthdate')?.dirty || addStudent.get('birthdate')?.touched)
+          editStudent.get('birthdate')?.invalid &&
+          editStudent.get('birthdate')?.errors &&
+          (editStudent.get('birthdate')?.dirty || editStudent.get('birthdate')?.touched)
         "
       >
         <div
           class="form-text text-danger"
-          *ngIf="addStudent.controls['birthdate']?.errors?.['required']"
+          *ngIf="editStudent.controls['birthdate']?.errors?.['required']"
         >
-          {{ "students.add.form.birthDate.errorMessage" | translate }}
+          {{ "students.student.add.form.birthDate.errorMessage" | translate }}
         </div>
       </div>
       <!-- ./Validation Requied -->
@@ -180,14 +181,14 @@
       <!-- Validation Requied -->
       <div
         *ngIf="
-          addStudent.get('address')?.invalid &&
-          addStudent.get('address')?.errors &&
-          (addStudent.get('address')?.dirty || addStudent.get('address')?.touched)
+          editStudent.get('address')?.invalid &&
+          editStudent.get('address')?.errors &&
+          (editStudent.get('address')?.dirty || editStudent.get('address')?.touched)
         "
       >
         <div
           class="form-text text-danger"
-          *ngIf="addStudent.controls['address']?.errors?.['required']"
+          *ngIf="editStudent.controls['address']?.errors?.['required']"
         >
           {{ "students.student.add.form.address.errorMessage" | translate }}
         </div>
@@ -227,14 +228,14 @@
       <!-- Validation Requied -->
       <div
         *ngIf="
-          addStudent.get('stage_id')?.invalid &&
-          addStudent.get('stage_id')?.errors &&
-          (addStudent.get('stage_id')?.dirty || addStudent.get('stage_id')?.touched)
+          editStudent.get('stage_id')?.invalid &&
+          editStudent.get('stage_id')?.errors &&
+          (editStudent.get('stage_id')?.dirty || editStudent.get('stage_id')?.touched)
         "
       >
         <div
           class="form-text text-danger"
-          *ngIf="addStudent.controls['stage_id']?.errors?.['required']"
+          *ngIf="editStudent.controls['stage_id']?.errors?.['required']"
         >
           {{ "students.student.add.form.stage.errorMessage" | translate }}
         </div>
@@ -276,14 +277,14 @@
       <!-- Validation Requied -->
       <div
         *ngIf="
-          addStudent.get('parent_id')?.invalid &&
-          addStudent.get('parent_id')?.errors &&
-          (addStudent.get('parent_id')?.dirty || addStudent.get('parent_id')?.touched)
+          editStudent.get('parent_id')?.invalid &&
+          editStudent.get('parent_id')?.errors &&
+          (editStudent.get('parent_id')?.dirty || editStudent.get('parent_id')?.touched)
         "
       >
         <div
           class="form-text text-danger"
-          *ngIf="addStudent.controls['parent_id']?.errors?.['required']"
+          *ngIf="editStudent.controls['parent_id']?.errors?.['required']"
         >
           {{ "students.student.add.form.parent.errorMessage" | translate }}
         </div>
@@ -293,6 +294,7 @@
     <!-- ./Parent -->
   </div>
   <div class="col-12">
-    <button pButton type="submit" label="{{'students.student.add.btnLabel' | translate}}" class="px-5"></button>
+    <button pButton type="submit" label="{{'students.student.edit.btnLabel' | translate}}" class="px-5"></button>
   </div>
 </form>
+

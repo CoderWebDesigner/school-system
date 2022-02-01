@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 
-import { ConfirmDialogComponent } from 'src/app/shared/components/confirm-dialog/confirm-dialog.component';
 import { Student } from 'src/app/shared/interfaces/student';
 import { DialogService } from 'src/app/shared/services/dialog/dialog.service';
 import { LangService } from 'src/app/shared/services/lang/lang.service';
@@ -15,7 +14,8 @@ export class StudentsComponent implements OnInit {
   students:Student[] = [];
   lang:any;
   display:boolean = false;
-  // @ViewChild(ConfirmDialogComponent)confirmDialogComponent!: ConfirmDialogComponent;
+  studentId!:number;
+  dialogType!:string;
   constructor(private studentService:StudentService,private langService:LangService,private dialogService:DialogService) { }
 
   ngOnInit(): void {
@@ -29,18 +29,19 @@ export class StudentsComponent implements OnInit {
       this.lang = result
     })
   }
-  opendialog(){
-    this.dialogService.toggleDisplayDialog(false)
+  opendialog(type:any){
     this.dialogService.toggleDisplayDialog(true)
+    this.dialogType = type;
   }
-  onPageChange(event:any){
-    console.log(event)
+  ngOnDestroy(): void {
+    //Called once, before the instance is destroyed.
+    //Add 'implements OnDestroy' to the class.
+
   }
-  onOpenConfirmDialog(event:any){
-    // this.confirmDialogComponent.openConfirmDialog();
-    console.log("students component !")
+  getType(type:any){
+    this.dialogType = type;
   }
-  delete(){
-    alert('delete')
+  getId(id:any){
+    this.studentId = id;
   }
 }

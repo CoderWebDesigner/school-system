@@ -11,8 +11,6 @@ export class WebsitecategoriesComponent implements OnInit {
   constructor(private routeService:RouteService) { }
 
   ngOnInit(): void {
-    let routes  = this.routeService.getRoutes();
-    console.log(routes.filter((e)=> e.path != "dashboard"))
     this.categories = this.routeService.getRoutes()
   }
 
