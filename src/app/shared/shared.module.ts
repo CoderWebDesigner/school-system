@@ -29,7 +29,7 @@ import { AuthlayoutComponent } from './components/authlayout/authlayout.componen
     HeaderonlyComponent,
     DataviewComponent,
     DialogComponent,
-    AuthlayoutComponent
+    AuthlayoutComponent,
   ],
   imports: [
     CommonModule,
@@ -39,11 +39,18 @@ import { AuthlayoutComponent } from './components/authlayout/authlayout.componen
     NgxModule,
     TranslateModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
-  exports:[MaterialModule, PrimengModule,ChartComponent,NgxModule,TranslateModule,FormsModule,
-    ReactiveFormsModule,DataviewComponent,DialogComponent]
+  exports: [
+    MaterialModule,
+    PrimengModule,
+    ChartComponent,
+    NgxModule,
+    TranslateModule,
+    FormsModule,
+    ReactiveFormsModule,
+    DataviewComponent,
+    DialogComponent,
+  ],
 })
-export class SharedModule { }
-
-
+export class SharedModule {}
