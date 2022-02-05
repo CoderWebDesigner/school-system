@@ -34,7 +34,7 @@
         />
 
         <div class="position-absolute edit-image-btn">
-          <button class="bg-white" (click)="profileImg.click()">
+          <button class="bg-white" (click)="profileImg.click()" type="button">
             <i class="pi pi-pencil"></i>
           </button>
         </div>
@@ -86,7 +86,7 @@
               class="form-text text-danger"
               *ngIf="addStudent.controls['gender']?.errors?.['required']"
             >
-              {{ "students.add.form.gender.errorMessage" | translate }}
+              {{ "students.student.add.form.gender.errorMessage" | translate }}
             </div>
           </div>
           <!-- ./Validation Requied -->
@@ -122,7 +122,7 @@
           class="form-text text-danger"
           *ngIf="addStudent.controls['firstname']?.errors?.['required']"
         >
-          {{ "students.add.form.firstname.errorMessage" | translate }}
+          {{ "students.student.add.form.firstname.errorMessage" | translate }}
         </div>
       </div>
       <!-- ./Validation Requied -->
@@ -156,7 +156,7 @@
           class="form-text text-danger"
           *ngIf="addStudent.controls['birthdate']?.errors?.['required']"
         >
-          {{ "students.add.form.birthDate.errorMessage" | translate }}
+          {{ "students.student.add.form.birthDate.errorMessage" | translate }}
         </div>
       </div>
       <!-- ./Validation Requied -->
@@ -215,12 +215,12 @@
       >
         <ng-template pTemplate="selectedItem">
           <div class="stage-item stage-item-value">
-            <div>{{ selectedStage.name }}</div>
+            <div>{{ selectedStage.stage }}</div>
           </div>
         </ng-template>
         <ng-template let-stage pTemplate="item">
           <div class="stage-item">
-            <div>{{ stage.name }}</div>
+            <div>{{ stage.stage }}</div>
           </div>
         </ng-template>
       </p-dropdown>

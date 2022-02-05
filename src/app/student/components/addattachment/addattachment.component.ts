@@ -11,9 +11,16 @@ export class AddattachmentComponent implements OnInit {
   constructor() {}
 
   onUpload(event: any) {
+    console.log('on upload : ',event)
     for (let file of event.files) {
       this.uploadedFiles.push(file);
     }
+  }
+  onBeforeUpload(event: any){
+    console.log('onBeforeUpload : ',event)
+  }
+  onSelect(event: any){
+    console.log('onSelect : ',event)
   }
 
   ngOnInit(): void {}

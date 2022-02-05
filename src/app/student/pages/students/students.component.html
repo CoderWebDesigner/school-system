@@ -21,6 +21,7 @@
   filterBy="name"
   layout="grid"
   [ngClass]="{ 'dataview-rtl': lang == 'rtl' }"
+  [loading]="loading"
 >
   <ng-template let-student pTemplate="gridItem">
     <div class="col-3">

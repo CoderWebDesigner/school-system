@@ -83,6 +83,8 @@ export class AddstudentComponent implements OnInit {
     this.addStudent.markAllAsTouched()
 
     console.log(this.addStudent)
-    // this._StudentInfoService.addStudent(this.addStudent.value).subscribe()
+    this._StudentInfoService.addStudent(this.addStudent.value).subscribe((result:any)=>{
+      console.log(result)
+    })
   }
 }

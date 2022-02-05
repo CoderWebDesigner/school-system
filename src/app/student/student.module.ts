@@ -13,6 +13,9 @@ import { DeletestudentComponent } from './components/deletestudent/deletestudent
 import { AddattachmentComponent } from './components/addattachment/addattachment.component';
 import { EditattachmentComponent } from './components/editattachment/editattachment.component';
 import { DeleteattachmentComponent } from './components/deleteattachment/deleteattachment.component';
+import { AddpaymentComponent } from './components/addpayment/addpayment.component';
+import { EditpaymentComponent } from './components/editpayment/editpayment.component';
+import { DeletepaymentComponent } from './components/deletepayment/deletepayment.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { DeleteattachmentComponent } from './components/deleteattachment/deletea
     DeletestudentComponent,
     AddattachmentComponent,
     EditattachmentComponent,
-    DeleteattachmentComponent
+    DeleteattachmentComponent,
+    AddpaymentComponent,
+    EditpaymentComponent,
+    DeletepaymentComponent
   ],
   imports: [
     CommonModule,

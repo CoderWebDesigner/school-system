@@ -35,7 +35,7 @@
         />
 
         <div class="position-absolute edit-image-btn">
-          <button class="bg-white" (click)="profileImg.click()">
+          <button class="bg-white" (click)="profileImg.click()" type="button">
             <i class="pi pi-pencil"></i>
           </button>
         </div>
@@ -136,6 +136,7 @@
         "students.student.add.form.birthDate.text" | translate
       }}</label>
       <p-calendar
+        [(ngModel)]="date"
         formControlName="birthdate"
         dateFormat="dd/mm/yy"
         appendTo="body"
@@ -216,12 +217,12 @@
       >
         <ng-template pTemplate="selectedItem">
           <div class="stage-item stage-item-value">
-            <div>{{ selectedStage.name }}</div>
+            <div>{{ selectedStage.stage }}</div>
           </div>
         </ng-template>
         <ng-template let-stage pTemplate="item">
           <div class="stage-item">
-            <div>{{ stage.name }}</div>
+            <div>{{ stage.stage }}</div>
           </div>
         </ng-template>
       </p-dropdown>

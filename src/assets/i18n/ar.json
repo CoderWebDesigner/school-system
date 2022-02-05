@@ -29,10 +29,13 @@
     "info":{
       "gender":"النوع",
       "birthDate":"تاريخ الميلاد",
+      "noBirthdateMessage":"لا يوجد تاريخ الميلاد !",
       "phone":"الهاتف",
+      "noPhoneMessage":"لا يوجد هاتف !",
       "address":"العنوان",
-      "city":"المدينة",
-      "activationStatus":"حالة التاكيد"
+      "noAddressMessage":"لا يوجد عنوان !",
+      "mothername":"اسم الام",
+      "noMothernameMessage":"لا يوجد اسم ام !"
     },
     "student":{
       "add":{
@@ -93,8 +96,19 @@
       "btnLabel":"إضافة ملف",
       "empty":"لا يوجد ملفات",
       "add":{
-        "file":"رفع ملفاتك"
+        "title":"إضافة ملف"
+      },
+      "edit":{
+        "title":"تعديل ملف"
+      },
+      "delete":{
+        "title":"مسح ملف"
       }
+    },
+    "payments":{
+      "title":"الدفعات",
+      "btnLabel":"إضافة دفعة",
+      "empty":"لا يوجد دفعات"
     }
   },
   "confirmDialog":{

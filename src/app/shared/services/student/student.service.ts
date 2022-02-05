@@ -232,23 +232,28 @@ export class StudentService {
     },
   ];
   private _listStudentsApiUrl = "api/students.json";
+  private _getStudentByIdApiUrl = "api/students/getallstudentdata/"
   private _addStudentsApiUrl = "api/students/add.json";
-  private _editStudentsApiUrl = "api/students/edit.json";
-  private _deleteStudentsApiUrl = "api/students/delete.json";
+  private _editStudentsApiUrl = "api/students/edit/";
+  private _deleteStudentsApiUrl = "api/students/delete/";
   constructor(private http:HttpClient) {}
-  getStudents() {
-    return this.students;
-  }
+  // getStudents() {
+  //   return this.students;
+  // }
   addStudent(student:Student){
     return this.http.post(`${environment.baseUrl}${this._addStudentsApiUrl}`,student).pipe(map((res:any) => res['data']))
   }
-  // getStudents(){
-  //   return this.http.get(`${environment.baseUrl}${this._listStudentsApiUrl}`).pipe(map((res:any) => res['data']))
-  // }
+  getStudentById(id:number){
+    console.log(`${environment.baseUrl}${this._getStudentByIdApiUrl}${id}.json`)
+    return this.http.get(`${environment.baseUrl}${this._getStudentByIdApiUrl}${id}.json`)
+  }
+  getStudents(){
+    return this.http.get(`${environment.baseUrl}${this._listStudentsApiUrl}`).pipe(map((res:any) => res['data']))
+  }
   editStudent(id:number,studentInfo:any){
-    return this.http.post(`${environment.baseUrl}${this._editStudentsApiUrl}`,studentInfo).pipe(map((res:any)=> res['data'] ))
+    return this.http.post(`${environment.baseUrl}${this._editStudentsApiUrl}${id}.json`,studentInfo).pipe(map((res:any)=> res['data'] ))
   }
   deleteStudent(id:number){
-    return this.http.post(`${environment.baseUrl}${this._editStudentsApiUrl}`,id).pipe(map((res:any)=> res['data'] ))
+    return this.http.post(`${environment.baseUrl}${this._deleteStudentsApiUrl}${id}.json`,'').pipe(map((res:any)=> res['data'] ))
   }
 }

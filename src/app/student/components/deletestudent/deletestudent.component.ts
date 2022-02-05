@@ -14,8 +14,7 @@ export class DeletestudentComponent implements OnInit {
   constructor(private dialogService:DialogService,private studentService:StudentService) { }
 
   ngOnInit(): void {
-    this.students = this.studentService.getStudents()
-    this.student = this.students.find((ele)=>ele.id == this.studentId)
+    this.getStudentById(this.studentId)
   }
   ngOnChanges(changes: SimpleChanges): void {
     console.log('changes',changes['studentId'].currentValue)
@@ -23,11 +22,16 @@ export class DeletestudentComponent implements OnInit {
   }
   getStudentById(id: number) {
     // Get Student By ID
-    this.students = this.studentService.getStudents();
+    // this.students = this.studentService.getStudents();
+    this.studentService.getStudents().subscribe((result:any)=>{
+      this.students = result
+    })
     this.student = this.students.find((ele) => ele.id == id);
   }
-  delete(id:number){
-    this.studentService.deleteStudent(id)
+  delete(){
+    this.studentService.deleteStudent(this.studentId).subscribe((result:any)=>{
+      this.dialogService.toggleDisplayDialog(false)
+    })
   }
   closeDialog(){
     this.dialogService.toggleDisplayDialog(false)

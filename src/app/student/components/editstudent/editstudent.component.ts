@@ -14,6 +14,7 @@ import { StudentService } from 'src/app/shared/services/student/student.service'
 export class EditstudentComponent implements OnInit {
   students: any[] = [];
   student: any;
+  date:any;
   selectedParent: any;
   selectedStage: any;
   selectedGender: any;
@@ -91,12 +92,20 @@ export class EditstudentComponent implements OnInit {
       gender: this.selectedGender.nameEn,
     });
   }
+  setDate(){
+    this.editStudent.patchValue({
+      stage_id:this.selectedStage
+    })
+  }
   getStudentById(id: number) {
     // Get Student By ID
-    this.students = this._StudentInfoService.getStudents();
-    this.student = this.students.find((ele) => ele.id == id);
+    // this.students = this._StudentInfoService.getStudents();
+    this._StudentInfoService.getStudentById(id).subscribe((result:any)=>{
+      this.student = result
+    })
     // Get Gender By NameEN
     this.selectedGender = this.gender_list.find((ele:any)=> ele.nameEn == this.student.gender);
+
     this.imageSrc = this.student.photo;
     this.selectedStage = this.student.stage_id;
     this.editStudent.patchValue(this.student);
@@ -105,6 +114,15 @@ export class EditstudentComponent implements OnInit {
     this.getStudentById(changes['id'].currentValue)
   }
   onSubmit() {
+    let d = new Date(this.date)
+    let day = d.getDate()
+    let month = d.getMonth() + 1;
+    let year = d.getFullYear()
+    let date = `${day}/${month}/${year}`
+    this.editStudent.patchValue({
+      birthdate:date
+    })
+    console.log(`${day}/${month}/${year}`)
     console.log(this.editStudent.value)
     // this._StudentInfoService.editStudent(this.addStudent.value).subscribe()
   }

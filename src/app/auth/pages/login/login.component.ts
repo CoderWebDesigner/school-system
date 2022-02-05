@@ -13,12 +13,20 @@ export class LoginComponent implements OnInit {
     username: new FormControl('', Validators.required),
     password: new FormControl('', Validators.required),
   });
-  constructor(private _AuthService:AuthService , private _Router: Router) { }
+  constructor(private _AuthService: AuthService, private _Router: Router) {
+    var token =localStorage.getItem('token');
+    if(token)
+    {
+      this._Router.navigateByUrl("/website-categories");
+    }
+  }
   login() {
     this._AuthService.Login(this.loginForm.value).subscribe(
-      (data:any) => {
+      (data: any) => {
         localStorage.setItem('token', data.data.token);
+        console.log()
         this._Router.navigateByUrl('/website-categories');
+
       },
       (err) => {
         console.log(err);
@@ -26,5 +34,6 @@ export class LoginComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 }

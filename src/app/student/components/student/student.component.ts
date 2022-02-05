@@ -18,6 +18,7 @@ export class StudentComponent implements OnInit {
   @Input() student!: Student;
   @Output() openConfirmDialog = new EventEmitter()
   dialogHeader!: string;
+  imageSrc: any = "../../assets/images/icons/user.png";
   constructor(private langService: LangService,private dialogService:DialogService) {}
 
   ngOnInit(): void {

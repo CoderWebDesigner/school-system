@@ -41,7 +41,7 @@
     </div>
     <div class="student-icon mx-auto py-3 custom-br">
       <img
-        [src]="student.photo"
+        [src]="(student.photo =='')?imageSrc:student.photo"
         alt=""
         class="img-fluid custom-shadow d-block mx-auto"
       />

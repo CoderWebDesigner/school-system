@@ -1,5 +1,7 @@
 <p-fileUpload
   (onUpload)="onUpload($event)"
+  (onBeforeUpload)="onBeforeUpload($event)"
+  (onSelect)="onSelect($event)"
   [multiple]="true"
   accept="image/*"
   [maxFileSize]="1000000"

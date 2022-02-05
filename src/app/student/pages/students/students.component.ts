@@ -16,15 +16,17 @@ export class StudentsComponent implements OnInit {
   display:boolean = false;
   studentId!:number;
   dialogType!:string;
+  loading:boolean = false
   constructor(private studentService:StudentService,private langService:LangService,private dialogService:DialogService) { }
 
   ngOnInit(): void {
-    this.students = this.studentService.getStudents()
+    // this.students = this.studentService.getStudents()
     // List Students
-    // this.studentService.getStudents().subscribe((result:any)=>{
-    //   console.log(result)
-    //   // this.students = result
-    // })
+    this.studentService.getStudents().subscribe((result:any)=>{
+      console.log(result)
+      this.students = result
+      this.loading = false
+    })
     this.langService.currentLang.subscribe((result:any)=>{
       this.lang = result
     })

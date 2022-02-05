@@ -66,15 +66,16 @@
         top: 0;
         right: 0;
         background: #fff;
-
-        button {
+        button,a {
+          display: inline-block;
           background: #fff;
           width: 30px;
           height: 30px;
           line-height: 19px;
           border-radius: 50%;
           border: 1px solid #ddd;
-
+          text-align: center;
+          cursor: pointer;
           i {
             font-size: 13px;
           }
@@ -91,10 +92,6 @@
           opacity: 1;
         }
       }
-    }
-
-    tbody {
-      height: 210px;
     }
 
     th,

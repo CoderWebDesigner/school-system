@@ -29,10 +29,13 @@
     "info":{
       "gender":"Gender",
       "birthDate":"Birth",
+      "noBirthdateMessage":"Birthdate not exist !",
       "phone":"Phone",
+      "noPhoneMessage":"Phone not exist !",
       "address":"Address",
-      "city":"City",
-      "activationStatus":"Activation Status"
+      "noAddressMessage":"Address not exist !",
+      "mothername":"Mother name",
+      "noMothernameMessage":"Mother name  not exist !"
     },
     "student":{
       "add":{
@@ -90,8 +93,19 @@
       "btnLabel":"Add File",
       "empty":"No Attachment Found",
       "add":{
-        "file":"Upload Your Files"
+        "title":"Add File"
+      },
+      "edit":{
+        "title":"Edit File"
+      },
+      "delete":{
+        "title":"delete File"
       }
+    },
+    "payments":{
+      "title":"Payment",
+      "btnLabel":"Add Payemnt",
+      "empty":"No Payment Found"
     }
   },
   "confirmDialog":{

@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseUrl:'http://madares.codesroots.com/'
+  baseUrl:'https://madares.codesroots.com/'
 };
 
 /*
